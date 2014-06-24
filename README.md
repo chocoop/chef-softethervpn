@@ -1,9 +1,10 @@
-ethersoftvpn Cookbook
+SoftEther VPN Cookbook
 =====================
-TODO: Enter the cookbook description here.
+SoftEther VPN Project develops and distributes SoftEther VPN, an Open-Source Free ​Cross-platform Multi-protocol VPN Program, as an academic project from University of Tsukuba.
 
-e.g.
-This cookbook makes your favorite breakfast sandwich.
+Project Site https://www.softether.org
+
+This cookbook will setup all the components needed to have your own SoftEther VPN Server.
 
 Requirements
 ------------
@@ -15,29 +16,25 @@ e.g.
 
 Attributes
 ----------
-TODO: List your cookbook attributes here.
-
-e.g.
 #### ethersoftvpn::default
-<table>
-  <tr>
-    <th>Key</th>
-    <th>Type</th>
-    <th>Description</th>
-    <th>Default</th>
-  </tr>
-  <tr>
-    <td><tt>['ethersoftvpn']['bacon']</tt></td>
-    <td>Boolean</td>
-    <td>whether to include bacon</td>
-    <td><tt>true</tt></td>
-  </tr>
-</table>
+
+
+
+Hubs Data Bag
+----------
+#### Attributes
+|Key|Type|Description|Default|
+|-----------------------------|-----------|-----------------------------|-----------|
+|['access_list']|int|Access Control List|Empty|
+|['access_list']|Boolean|whether to include bacon|true|
+|['admin_option']['allow_hub_admin_change_option']|Boolean|whether to include bacon|true|
+|['admin_option']['allow_hub_admin_change_option']|Boolean|whether to include bacon|true|
+
 
 Usage
 -----
 #### ethersoftvpn::default
-TODO: Write usage instructions for each cookbook.
+Installs all of the dependencies for all EtherSoft Applications.
 
 e.g.
 Just include `ethersoftvpn` in your node's `run_list`:
@@ -48,8 +45,49 @@ Just include `ethersoftvpn` in your node's `run_list`:
   "run_list": [
     "recipe[ethersoftvpn]"
   ]
-}
-```
+}```
+
+#### ethersoftvpn::client
+Installs the client tools and libraries.
+
+e.g.
+Just include `ethersoftvpn::client` in your node's `run_list`:
+
+```json
+{
+  "name":"my_node",
+  "run_list": [
+    "recipe[ethersoftvpn::client]"
+  ]
+}```
+
+#### ethersoftvpn::server
+Installs the server tools and libraries.
+
+e.g.
+Just include `ethersoftvpn::server` in your node's `run_list`:
+
+```json
+{
+  "name":"my_node",
+  "run_list": [
+    "recipe[ethersoftvpn::server]"
+  ]
+}```
+
+#### ethersoftvpn::bridge
+Installs the client tools and libraries.
+
+e.g.
+Just include `ethersoftvpn::bridge` in your node's `run_list`:
+
+```json
+{
+  "name":"my_node",
+  "run_list": [
+    "recipe[ethersoftvpn::bridge]"
+  ]
+}```
 
 Contributing
 ------------
