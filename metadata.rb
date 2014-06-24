@@ -1,9 +1,15 @@
-name             'SoftEther'
-maintainer       'Charles Gardner'
-maintainer_email 'cgardner2020@gmail.com'
-license          'GPLv2'
-description      'Installs/Configures SoftEther VPN Servers and Clients'
-long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
-version          '0.1.0'
+name                'SoftEther'
+maintainer          'Charles Gardner'
+maintainer_email    'cgardner2020@gmail.com'
+license             'GPLv3'
+description         'Installs/Configures SoftEther VPN Servers and Clients'
+long_description    IO.read(File.join(File.dirname(__FILE__), 'README.md'))
+version             '0.1.2'
 
+depends             'apt'
+depends             'build-essential'
+depends             'curl'
 
+%w{ debian ubuntu }.each do |os|
+  supports os
+end
