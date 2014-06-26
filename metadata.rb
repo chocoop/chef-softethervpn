@@ -1,4 +1,4 @@
-name                'SoftEther'
+name                'softether'
 maintainer          'Charles Gardner'
 maintainer_email    'cgardner2020@gmail.com'
 license             'GPLv3'
